@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects - Lingala Satya Mani Posiyya</title>
+  <style>
+    :root {
+      --main-color: #00bcd4;
+      --bg-color: #1e1e1e;
+      --accent-bg: #2a2a2a;
+      --text-color: white;
+      --highlight: aqua;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: var(--bg-color); color: var(--text-color); overflow-x: hidden; }
+
+    header { display: flex; justify-content: space-between; align-items: center; background-color: #333; padding: 15px 30px; position: sticky; top: 0; z-index: 10; flex-wrap: wrap; }
+    .logo { font-size: 24px; font-weight: bold; color: var(--main-color); }
+    nav { display: flex; gap: 15px; }
+    nav a button { background-color: transparent; color: var(--text-color); border: 1px solid var(--main-color); padding: 8px 16px; border-radius: 5px; cursor: pointer; transition: all 0.3s ease; }
+    nav a button:hover { background-color: var(--main-color); color: black; transform: scale(1.05); }
+    .hamburger { display: none; font-size: 28px; color: var(--main-color); cursor: pointer; border: none; background: none; }
+
+    main { text-align: center; padding: 40px 20px; }
+    h2 { margin-bottom: 20px; }
+
+    .projects { display: flex; flex-direction: column; gap: 30px; max-width: 1000px; margin: 0 auto; }
+    .project-card { background-color: var(--accent-bg); padding: 25px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 188, 212, 0.2); transition: all 0.3s ease; text-align: left; }
+    .project-card:hover { transform: scale(1.02); box-shadow: 0 0 20px rgba(0, 188, 212, 0.5); }
+    .project-card h3 { color: var(--main-color); margin-bottom: 10px; }
+    .project-card p { color: var(--highlight); margin-bottom: 10px; line-height: 1.5; }
+    .project-card ul { margin-left: 20px; color: white; }
+    .project-card ul li { margin-bottom: 5px; }
+
+    @media (max-width: 768px) {
+      .hamburger { display: block; order: 2; }
+      nav { display: none; flex-direction: column; width: 100%; background-color: #333; margin-top: 10px; }
+      nav.show { display: flex; }
+      nav a { text-align: center; padding: 10px 0; border-top: 1px solid #444; }
+      nav a button { width: 100%; border-radius: 0; font-size: 16px; }
+    }
+  </style>
+  <script>
+    function toggleMenu() {
+      document.getElementById('nav-links').classList.toggle('show');
+    }
+  </script>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="logo">Portfolio</div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <nav id="nav-links">
+      <a href="Portfolio.html"><button>Home</button></a>
+      <a href="about.html"><button>About</button></a>
+      <a href="skills.html"><button>Skills</button></a>
+      <a href="contact.html"><button>Contact</button></a>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+    <h2>My Projects</h2>
+    <div class="projects">
+
+      <div class="project-card">
+        <h3>Calculator</h3>
+        <p>A simple web-based calculator designed to perform basic arithmetic operations like addition, subtraction, multiplication, and division. Ideal for quick calculations on the browser.</p>
+        <ul>
+          <li>Technologies: HTML, CSS, JavaScript</li>
+          <li>Features: Responsive design, interactive buttons, live calculation display</li>
+        </ul>
+      </div>
+
+      <div class="project-card">
+        <h3>Hotel Management</h3>
+        <p>An application to manage hotel operations including room availability, bookings, and staff assignments. Provides an easy-to-use interface for hotel staff to keep track of day-to-day operations.</p>
+        <ul>
+          <li>Technologies: HTML, CSS, PHP, MySQL</li>
+          <li>Features: Room booking system, staff management, dynamic dashboard</li>
+        </ul>
+      </div>
+
+      <div class="project-card">
+        <h3>Emergency Hospital</h3>
+        <p>A location-based web application to help users find nearby emergency hospitals quickly. Displays hospital details, contact info, and directions.</p>
+        <ul>
+          <li>Technologies: HTML, CSS, JavaScript, Google Maps API</li>
+          <li>Features: Search by location, hospital contact details, interactive map</li>
+        </ul>
+      </div>
+
+      <div class="project-card">
+        <h3>Academy Hub</h3>
+        <p>A multi-functional academic platform providing tools such as online quizzes, bio-data management, resource sharing, and attendance tracking. Designed to help teachers and students manage educational activities efficiently.</p>
+        <ul>
+          <li>Technologies: HTML, CSS, JavaScript, PHP, MySQL</li>
+          <li>Features: Quiz module, attendance tracker, resource library, bio-data form</li>
+        </ul>
+      </div>
+
+      <div class="project-card">
+        <h3>Online Marketing</h3>
+        <p>An e-commerce style platform to display products with details like weight, contact phone number, and location. Helps sellers showcase products and buyers find items easily.</p>
+        <ul>
+          <li>Technologies: HTML, CSS, JavaScript, PHP</li>
+          <li>Features: Product catalog, filtering options, location-based details</li>
+        </ul>
+      </div>
+
+    </div>
+  </main>
+</body>
+</html>

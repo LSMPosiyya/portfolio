@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Soft Skills</title>
+  <style>
+    body {
+      background-color: #1e1e1e;
+      color: white;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 20px;
+      margin: 0;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: aqua;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .skill-container {
+      background-color: #2a2a2a;
+      padding: 20px;
+      border-radius: 10px;
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      box-shadow: 0 0 10px rgba(0, 188, 212, 0.4);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .skill-container:hover {
+      box-shadow: 0 0 15px rgba(0, 188, 212, 0.8);
+    }
+
+    .skill-container img {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+      margin-top: 4px;
+    }
+
+    .skill-info {
+      flex: 1;
+    }
+
+    .skill-name {
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 6px;
+      color: #00bcd4;
+    }
+
+    .skill-desc {
+      font-size: 14px;
+      line-height: 1.4;
+      color: #a0f0f5;
+    }
+
+    @media (max-width: 500px) {
+      .skill-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .skill-container img {
+        margin: 0 0 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h2>My Soft Skills</h2>
+
+  <div class="skills-grid">
+
+    <div class="skill-container">
+      <img src="https://img.icons8.com/ios-filled/50/00bcd4/communication.png" alt="Communication" />
+      <div class="skill-info">
+        <div class="skill-name">Communication</div>
+        <div class="skill-desc">
+          Effectively articulating ideas and technical concepts to team members and clients.
+        </div>
+      </div>
+    </div>
+
+    <div class="skill-container">
+      <img src="https://img.icons8.com/ios-filled/50/00bcd4/teamwork.png" alt="Teamwork" />
+      <div class="skill-info">
+        <div class="skill-name">Teamwork</div>
+        <div class="skill-desc">
+          Collaborating seamlessly with colleagues to achieve common goals and deliver quality projects.
+        </div>
+      </div>
+    </div>
+
+    <div class="skill-container">
+      <img src="https://img.icons8.com/ios-filled/50/00bcd4/problem-solving.png" alt="Problem Solving" />
+      <div class="skill-info">
+        <div class="skill-name">Problem Solving</div>
+        <div class="skill-desc">
+          Analyzing challenges and developing innovative solutions efficiently and effectively.
+        </div>
+      </div>
+    </div>
+
+    <div class="skill-container">
+      <img src="https://img.icons8.com/ios-filled/50/00bcd4/time-management.png" alt="Time Management" />
+      <div class="skill-info">
+        <div class="skill-name">Time Management</div>
+        <div class="skill-desc">
+          Prioritizing tasks and managing deadlines to consistently deliver projects on time.
+        </div>
+      </div>
+    </div>
+
+    <div class="skill-container">
+      <img src="https://img.icons8.com/ios-filled/50/00bcd4/adaptability.png" alt="Adaptability" />
+      <div class="skill-info">
+        <div class="skill-name">Adaptability</div>
+        <div class="skill-desc">
+          Quickly adjusting to new technologies and changing project requirements.
+        </div>
+      </div>
+    </div>
+
+    <div class="skill-container">
+      <img src="https://img.icons8.com/ios-filled/50/00bcd4/leadership.png" alt="Leadership" />
+      <div class="skill-info">
+        <div class="skill-name">Leadership</div>
+        <div class="skill-desc">
+          Leading teams with clarity, motivating members to excel and deliver results.
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

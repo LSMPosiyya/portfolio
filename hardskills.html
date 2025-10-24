@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hard Skills</title>
+  <style>
+    body {
+      background-color: #1e1e1e;
+      color: white;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 20px;
+      margin: 0;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: aqua;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .skill-container {
+      background-color: #2a2a2a;
+      padding: 15px 20px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      box-shadow: 0 0 10px rgba(0, 188, 212, 0.4);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .skill-container:hover {
+      box-shadow: 0 0 15px rgba(0, 188, 212, 0.8);
+    }
+
+    .skill-container img {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+    }
+
+    .skill-info {
+      flex: 1;
+    }
+
+    .skill-name {
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .skill-level {
+      width: 100%;
+      height: 12px;
+      -webkit-appearance: none;
+      appearance: none;
+      background: #444;
+      border-radius: 6px;
+      overflow: hidden;
+      cursor: default;
+    }
+
+    /* Style for range bar fill */
+    .skill-level::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 0;
+      height: 0;
+    }
+
+    .skill-level::-moz-range-thumb {
+      width: 0;
+      height: 0;
+      border: none;
+    }
+
+    .skill-level::-webkit-slider-runnable-track {
+      height: 12px;
+      background: linear-gradient(to right, #00bcd4 var(--value), #444 var(--value));
+      border-radius: 6px;
+    }
+
+    /* fallback for unsupported browsers */
+    .skill-level::-moz-range-track {
+      background: linear-gradient(to right, #00bcd4 var(--value), #444 var(--value));
+      border-radius: 6px;
+      height: 12px;
+    }
+
+    /* Disabled input styling */
+    input[disabled] {
+      pointer-events: none;
+    }
+
+    /* Mobile adjustments */
+    @media (max-width: 500px) {
+      .skill-container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .skill-container img {
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h2>My Hard Skills</h2>
+
+  <div class="skills-grid">
+    <div class="skill-container">
+      <img src="https://img.icons8.com/color/48/html-5--v1.png" alt="HTML" />
+      <div class="skill-info">
+        <div class="skill-name">HTML</div>
+        <input type="range" value="90" max="100" disabled style="--value: 90%;" />
+      </div>
+    </div>
+
+    <div class="skill-container">
+      <img src="https://img.icons8.com/color/48/css3.png" alt="CSS" />
+      <div class="skill-info">
+        <div class="skill-name">CSS</div>
+        <input type="range" value="85" max="100" disabled style="--value: 85%;" />
+      </div>
+    </div>
+
+    <div class="skill-container">
+      <img src="https://img.icons8.com/color/48/javascript--v1.png" alt="JavaScript" />
+      <div class="skill-info">
+        <div class="skill-name">JavaScript</div>
+        <input type="range" value="75" max="100" disabled style="--value: 75%;" />
+      </div>
+    </div>
+
+    <div class="skill-container">
+      <img src="https://img.icons8.com/offices/40/php-logo.png" alt="PHP" />
+      <div class="skill-info">
+        <div class="skill-name">PHP</div>
+        <input type="range" value="80" max="100" disabled style="--value: 80%;" />
+      </div>
+    </div>
+
+    <div class="skill-container">
+      <img src="https://img.icons8.com/fluency/48/mysql-logo.png" alt="MySQL" />
+      <div class="skill-info">
+        <div class="skill-name">MySQL</div>
+        <input type="range" value="70" max="100" disabled style="--value: 70%;" />
+      </div>
+    </div>
+
+    <div class="skill-container">
+      <img src="https://img.icons8.com/color/48/c-programming.png" alt="C" />
+      <div class="skill-info">
+        <div class="skill-name">C</div>
+        <input type="range" value="85" max="100" disabled style="--value: 65%;" />
+      </div>
+    </div>
+
+    <div class="skill-container">
+      <img src="https://img.icons8.com/color/48/python.png" alt="Python" />
+      <div class="skill-info">
+        <div class="skill-name">Python</div>
+        <input type="range" value="75" max="100" disabled style="--value: 75%;" />
+      </div>
+    </div>
+
+    <div class="skill-container">
+      <img src="https://img.icons8.com/color/48/java-coffee-cup-logo--v1.png" alt="Java" />
+      <div class="skill-info">
+        <div class="skill-name">Java</div>
+        <input type="range" value="70" max="100" disabled style="--value: 70%;" />
+      </div>
+    </div>
+
+    <div class="skill-container">
+      <img src="https://img.icons8.com/color/48/ms-word.png" alt="MS Word" />
+      <div class="skill-info">
+        <div class="skill-name">MS Word</div>
+        <input type="range" value="90" max="100" disabled style="--value: 90%;" />
+      </div>
+    </div>
+
+    <div class="skill-container">
+      <img src="https://img.icons8.com/color/48/ms-excel.png" alt="MS Excel" />
+      <div class="skill-info">
+        <div class="skill-name">MS Excel</div>
+        <input type="range" value="85" max="100" disabled style="--value: 85%;" />
+      </div>
+    </div>
+
+    <div class="skill-container">
+      <img src="https://img.icons8.com/color/48/adobe-photoshop--v1.png" alt="Photoshop" />
+      <div class="skill-info">
+        <div class="skill-name">Adobe Photoshop</div>
+        <input type="range" value="70" max="100" disabled style="--value: 70%;" />
+      </div>
+    </div>
+
+    <div class="skill-container">
+      <img src="https://img.icons8.com/color/48/ms-access.png" alt="MS Access" />
+      <div class="skill-info">
+        <div class="skill-name">MS Access</div>
+        <input type="range" value="60" max="100" disabled style="--value: 60%;" />
+      </div>
+    </div>
+
+    <!-- New skills: NumPy and Pandas -->
+    <div class="skill-container">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/NumPy_logo.svg" alt="NumPy" style="width: 60px; height: 60px;" />
+      <div class="skill-info">
+        <div class="skill-name">NumPy</div>
+        <input type="range" value="70" max="100" disabled style="--value: 70%;" />
+      </div>
+    </div>
+
+    <div class="skill-container">
+      <img src="https://pandas.pydata.org/static/img/pandas_mark.svg" alt="Pandas" style="width: 60px; height: 60px;" />
+      <div class="skill-info">
+        <div class="skill-name">Pandas</div>
+        <input type="range" value="65" max="100" disabled style="--value: 65%;" />
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

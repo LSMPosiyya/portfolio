@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Me - Portfolio</title>
+  <style>
+    /* General Styles */
+    body {
+      background-color: #1e1e1e;
+      color: white;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* HEADER */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #333;
+      padding: 15px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      flex-wrap: wrap;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #00bcd4;
+    }
+    nav {
+      display: flex;
+      gap: 15px;
+    }
+    nav a button {
+      background-color: transparent;
+      color: white;
+      border: 1px solid #00bcd4;
+      padding: 8px 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    nav a button:hover {
+      background-color: #00bcd4;
+      color: black;
+      transform: scale(1.05);
+    }
+    .hamburger {
+      display: none;
+      font-size: 28px;
+      color: #00bcd4;
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+
+    /* CONTACT FORM */
+    .contact-form {
+      background-color: #2a2a2a;
+      padding: 30px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 500px;
+      margin: 40px auto;
+      box-shadow: 0 0 15px rgba(0, 188, 212, 0.5);
+    }
+    .contact-form h2 {
+      text-align: center;
+      color: #00bcd4;
+      margin-bottom: 20px;
+    }
+    .contact-form label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #a0f0f5;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border-radius: 6px;
+      border: none;
+      background-color: #1e1e1e;
+      color: white;
+      font-size: 16px;
+      resize: none;
+    }
+    .contact-form button {
+      width: 100%;
+      padding: 12px;
+      background-color: #00bcd4;
+      color: black;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+    .contact-form button:hover {
+      transform: scale(1.05);
+      background-color: #0097a7;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hamburger { display: block; order: 2; }
+      nav { display: none; flex-direction: column; width: 100%; background-color: #333; margin-top: 10px; }
+      nav.show { display: flex; }
+      nav a { text-align: center; padding: 10px 0; border-top: 1px solid #444; }
+      nav a button { width: 100%; border-radius: 0; font-size: 16px; }
+    }
+  </style>
+  <script>
+    function toggleMenu() {
+      document.getElementById('nav-links').classList.toggle('show');
+    }
+  </script>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">Portfolio</div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <nav id="nav-links">
+      <a href="Portfolio.html"><button>Home</button></a>
+      <a href="about.html"><button>About</button></a>
+      <a href="skills.html"><button>Skills</button></a>
+      <a href="contact.html"><button>Contact</button></a>
+    </nav>
+  </header>
+
+  <!-- CONTACT FORM -->
+  <div class="contact-form">
+    <h2>Contact Me</h2>
+    <form action="mailto:narmadhalingala@gmail.com" method="post" enctype="text/plain">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phno" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="text" rows="6" required></textarea>
+
+      <button type="submit">Send Email</button>
+    </form>
+  </div>
+
+</body>
+</html>

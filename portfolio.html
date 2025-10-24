@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio - Lingala Satya Mani Posiyya</title>
+
+  <style>
+  :root {
+  --main-color: #00bcd4;
+  --bg-color: #1e1e1e;
+  --accent-bg: #2a2a2a;
+  --text-color: white;
+  --highlight: aqua;
+}
+
+/* RESET & BASE */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: var(--bg-color); color: var(--text-color); overflow-x: hidden; }
+
+/* HEADER & NAV */
+header { display: flex; justify-content: space-between; align-items: center; background-color: #333; padding: 15px 30px; position: sticky; top: 0; z-index: 10; flex-wrap: wrap; animation: slideDown 0.8s ease; }
+.logo { font-size: 24px; font-weight: bold; color: var(--main-color); animation: fadeIn 1.2s ease; }
+nav { display: flex; gap: 15px; transition: 0.3s; }
+nav a button { background-color: transparent; color: var(--text-color); border: 1px solid var(--main-color); padding: 8px 16px; border-radius: 5px; cursor: pointer; transition: all 0.3s ease; }
+nav a button:hover { background-color: var(--main-color); color: black; transform: scale(1.05); }
+.hamburger { display: none; font-size: 28px; color: var(--main-color); cursor: pointer; border: none; background: none; transition: transform 0.3s ease; }
+.hamburger:hover { transform: rotate(90deg); }
+
+/* MAIN CONTENT */
+main { text-align: center; padding: 40px 20px; animation: fadeIn 1.5s ease; }
+img { display: block; margin: 40px auto 20px; border-radius: 50%; width: 200px; height: 200px; object-fit: cover; animation: imageEntrance 2s ease forwards, softGlow 4s ease-in-out infinite alternate; box-shadow: 0 0 0 rgba(0, 188, 212, 0.8); transition: all 0.4s ease-in-out; }
+img:hover { transform: scale(1.08) rotate(3deg); box-shadow: 0 0 25px rgba(0, 188, 212, 0.8), 0 0 50px rgba(0, 188, 212, 0.4); }
+h2, h4 { color: var(--text-color); margin-top: 30px; animation: fadeUp 1s ease forwards; }
+p { color: var(--highlight); max-width: 700px; margin: 0 auto 20px; line-height: 1.6; opacity: 0; animation: fadeUp 1s ease forwards 0.3s; }
+button.load-btn { background-color: var(--main-color); color: black; border: none; padding: 10px 15px; margin: 5px; border-radius: 5px; cursor: pointer; font-weight: bold; transition: all 0.3s ease; animation: fadeIn 1.3s ease; }
+button.load-btn:hover { background-color: var(--highlight); color: black; transform: translateY(-3px); }
+iframe { margin-top: 15px; border: 2px solid var(--highlight); border-radius: 10px; width: 90%; max-width: 700px; height: 300px; opacity: 0; animation: fadeIn 1.5s ease forwards 0.4s; transition: 0.3s; }
+
+/* PROJECTS */
+.projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin: 30px auto; max-width: 1000px; padding: 20px; justify-content: center; text-align: center; }
+.project-card { background-color: var(--accent-bg); padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 188, 212, 0.2); transition: all 0.3s ease; text-align: center; }
+.project-card:hover { transform: scale(1.03); box-shadow: 0 0 20px rgba(0, 188, 212, 0.5); }
+
+/* FORM */
+#text2 { display: flex; justify-content: center; padding: 40px 20px; animation: fadeUp 1.2s ease forwards; }
+form { width: 100%; max-width: 400px; background-color: var(--accent-bg); padding: 25px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 188, 212, 0.3); transition: all 0.3s ease; }
+form:hover { transform: scale(1.02); box-shadow: 0 0 20px rgba(0, 188, 212, 0.6); }
+label { text-align: left; display: block; margin-bottom: 5px; font-weight: bold; }
+input, textarea { width: 100%; padding: 10px; margin-bottom: 15px; border: none; border-radius: 5px; }
+form button { background-color: var(--main-color); color: black; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer; font-weight: bold; width: 100%; transition: 0.3s; }
+form button:hover { background-color: var(--highlight); transform: translateY(-2px); }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hamburger { display: block; order: 2; }
+  nav { display: none; flex-direction: column; width: 100%; background-color: #333; margin-top: 10px; }
+  nav.show { display: flex; animation: slideDown 0.4s ease; }
+  nav a { text-align: center; padding: 10px 0; border-top: 1px solid #444; }
+  nav a button { width: 100%; border-radius: 0; font-size: 16px; }
+  iframe { height: 250px; }
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes fadeUp { from { transform: translateY(30px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+@keyframes slideDown { from { transform: translateY(-50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+@keyframes imageEntrance { 
+  0% { opacity: 0; transform: scale(0.6) translateY(-50px); box-shadow: 0 0 0 rgba(0, 188, 212, 0); } 
+  60% { opacity: 1; transform: scale(1.05) translateY(0); box-shadow: 0 0 20px rgba(0, 188, 212, 0.6); } 
+  100% { transform: scale(1); box-shadow: 0 0 15px rgba(0, 188, 212, 0.4); } 
+}
+@keyframes softGlow { 0% { box-shadow: 0 0 15px rgba(0, 188, 212, 0.3); } 100% { box-shadow: 0 0 30px rgba(0, 188, 212, 0.8); } }
+
+  </style>
+
+  <script>
+    function load(url, frameId) {
+      document.getElementById(frameId).src = url;
+    }
+    function toggleMenu() {
+      document.getElementById('nav-links').classList.toggle('show');
+    }
+  </script>
+</head>
+
+<body>
+
+  <!-- HEADER & NAVIGATION -->
+  <header>
+    <div class="logo">Portfolio</div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <nav id="nav-links">
+      <a href="about.html" ><button>About</button></a>
+      <a href="skills.html" ><button>Skills</button></a>
+      <a href="projects.html"><button>Projects</button></a>
+      <a href="contact.html"><button>Contact</button></a>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <img src="portfolio.jpg" alt="Lingala Satya Mani Posiyya" title="Lingala Satya Mani Posiyya" />
+    <h2>Lingala Satya Mani Posiyya</h2>
+
+    <h4>About Me</h4>
+    <p>
+      I am a dedicated and results-driven Full Stack Web Developer with a strong foundation in HTML, CSS, JavaScript, and PHP.
+      My expertise lies in designing and developing responsive, user-centric websites and dynamic web applications.
+      I take pride in writing clean, efficient code and creating seamless user experiences across devices.
+    </p>
+
+    <h4>Skills</h4>
+    <button class="load-btn" onclick="load('softskills.html', 'skills-frame')">Soft Skills</button>
+    <button class="load-btn" onclick="load('hardskills.html', 'skills-frame')">Hard Skills</button>
+    <br>
+    <iframe id="skills-frame"></iframe>
+
+    <!-- PROJECTS SECTION -->
+    <h4 id="projects">Projects</h4>
+    <div class="projects">
+      <div class="project-card">
+        <h3>🧮 Calculator</h3>
+        <p>A simple interactive calculator built with HTML, CSS, and JavaScript featuring smooth button animations and responsive design.</p>
+      </div>
+
+      <div class="project-card">
+        <h3>🏨 Hotel Management System</h3>
+        <p>A web-based system to manage hotel operations efficiently, including room booking, staff management, and billing.</p>
+      </div>
+
+      <div class="project-card">
+        <h3>🏥 Emergency Hospital Locator</h3>
+        <p>A web app that displays emergency hospitals available in a user’s location, helping people find nearby hospitals quickly with contact info.</p>
+      </div>
+
+      <div class="project-card">
+        <h3>🎓 Academy Hub</h3>
+        <p>An academic management platform integrating multiple tools — quiz system, bio data management, resource sharing, and attendance tracking.</p>
+      </div>
+
+      <div class="project-card">
+        <h3>🥦 Online Vegetable Market</h3>
+        <p>A static website showcasing available vegetables with details like weight, seller phone number, and location — no online transactions.</p>
+      </div>
+    </div>
+
+    <h4>Contact</h4>
+  </main>
+
+  <!-- CONTACT FORM -->
+  <div id="text2">
+    <form action="mailto:narmadhalingala@gmail.com" method="post" enctype="text/plain">
+      <label for="admin-name">Enter Name:</label>
+      <input type="text" id="admin-name" name="name" required>
+
+      <label for="admin-phno">Phone Number:</label>
+      <input type="tel" id="admin-phno" name="phno" required>
+
+      <label for="admin-text">Feedback:</label>
+      <textarea id="admin-text" name="text" required></textarea>
+
+      <button type="submit">Send Email</button>
+    </form>
+  </div>
+
+</body>
+</html>
